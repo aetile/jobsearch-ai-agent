@@ -1,112 +1,219 @@
 {
-  "jobboards": [
+  "sources": [
+    {
+      "name": "francetravail",
+      "type": "francetravail",
+      "enabled": false,
+      "common_params": {
+        "departement": "95,92,78,75,93",
+        "typeContrat": "CDI"
+      },
+      "queries": [
+        {
+          "motsCles": "Ingénieur Linux"
+        },
+        {
+          "motsCles": "Ingénieur Infrastructure Système"
+        }
+      ]
+    },
+    {
+      "name": "service_public",
+      "type": "web_generic",
+      "category": "jobboard",
+      "enabled": true,
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "urls": [
+        "https://choisirleservicepublic.gouv.fr/nos-offres?q=Devops%20Linux"
+      ],
+      "request_delay_s": 1.0
+    },
     {
       "name": "apec",
+      "type": "web_generic",
+      "category": "jobboard",
       "enabled": false,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
-      "search_urls": [
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "urls": [
         "https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Linux%20DevOps"
-      ]
+      ],
+      "request_delay_s": 1.0
     },
     {
       "name": "freework",
+      "type": "web_generic",
+      "category": "jobboard",
       "enabled": true,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
-      "search_urls": [
-        "https://www.free-work.com/fr/tech-it/jobs?query=Linux%20Ansible%20Terraform"
-      ]
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "urls": [
+        "https://www.free-work.com/fr/tech-it/jobs?query=Linux%20Ansible%20Terraform",
+        "https://www.free-work.com/fr/tech-it/jobs?query=DevOps%20SRE"
+      ],
+      "request_delay_s": 1.0
     },
     {
       "name": "wttj",
-      "enabled": true,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
-      "search_urls": [
-        "https://www.welcometothejungle.com/fr/jobs?query=Infrastructure%20Linux"
-      ]
-    },
-    {
-      "name": "indeed",
-      "enabled": true,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
-      "search_urls": [
-        "https://fr.indeed.com/jobs?q=DevOps+Linux+Kubernetes&l=Val-d%27Oise+%2895%29",
-        "https://fr.indeed.com/jobs?q=Platform+Engineer+Terraform+Linux&l=%C3%8Ele-de-France&remotejob=032b3046-0674-476c-a8f7-71eb9e8b7437"
+      "type": "wttj",
+      "category": "jobboard",
+      "enabled": false,
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "request_delay_s": 1.5,
+      "endpoint": "https://csekhvms53-dsn.algolia.net/1/indexes/wttj_jobs_production_fr/query",
+      "algolia_app_id": "CSEKHVMS53",
+      "algolia_api_key": "4bd8f6215d0cc52b26430765769e65a0",
+      "keywords": [
+        "DevOps",
+        "SRE",
+        "Linux"
+      ],
+      "hits_per_page": 20,
+      "max_pages": 1,
+      "facet_filters": [
+        [
+          "offices.country_code:FR"
+        ]
       ]
     },
     {
       "name": "glassdoor",
+      "type": "web_generic",
+      "category": "jobboard",
       "enabled": false,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
-      "search_urls": [
-        "https://www.glassdoor.fr/Emploi/ingenieur-systeme-linux-emplois-SRCH_IL.0,7_IC2896597_KO8,27.htm"
-      ]
-    }
-  ],
-  "companies": [
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "urls": [
+        "https://www.glassdoor.fr/Job/index.htm"
+      ],
+      "request_delay_s": 1.0
+    },
     {
-      "name": "Thales",
-      "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://careers.thalesgroup.com/fr/fr/home"
+      "name": "arianegroup",
+      "type": "workday",
+      "category": "company",
+      "enabled": false,
+      "company": "ArianeGroup",
+      "zone": "Val-d'Oise (95) / IDF",
+      "endpoint": "https://arianegroup.wd3.myworkdayjobs.com/wday/cxs/arianegroup/EXTERNALALL/jobs",
+      "web_base_url": "https://arianegroup.wd3.myworkdayjobs.com/fr-FR/EXTERNALALL",
+      "keywords": [
+        "Linux",
+        "Infrastructure",
+        "Système"
       ]
     },
     {
-      "name": "Safran",
+      "name": "thales",
+      "type": "phenom",
+      "category": "company",
       "enabled": true,
-      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote si hors 95)",
-      "careers_urls": [
-        "https://www.safran-group.com/fr/offres"
+      "company": "Thales",
+      "zone": "Val-d'Oise (95) / IDF",
+      "endpoint": "https://careers.thalesgroup.com/widgets",
+      "keywords": [
+        "DevOps",
+        "Linux"
       ]
     },
     {
-      "name": "Dassault Aviation",
+      "name": "indeed",
+      "type": "web_generic",
+      "category": "jobboard",
+      "enabled": false,
+      "zone": "IDF (télétravail partiel ou full remote)",
+      "urls": [
+        "https://fr.indeed.com/jobs?q=DevOps+Linux+Kubernetes&l=Val-d%27Oise+%2895%29",
+        "https://fr.indeed.com/jobs?q=Platform+Engineer+Terraform+Linux&l=%C3%8Ele-de-France&remotejob=032b3046-0674-476c-a8f7-71eb9e8b7437"
+      ],
+      "request_delay_s": 1.0
+    },
+    {
+      "name": "safran",
+      "type": "web_generic",
+      "category": "company",
+      "enabled": false,
+      "company": "Safran",
+      "zone": "Val-d'Oise (95) / IDF",
+      "urls": [
+        "https://www.safran-group.com/fr/offres?search=DevOps",
+        "https://www.safran-group.com/fr/offres?search=Linux"
+      ],
+      "request_delay_s": 1.0
+    },
+    {
+      "name": "dassault_aviation",
+      "type": "web_generic",
+      "category": "company",
       "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://dassault-aviation-cand.talent-soft.com/"
+      "company": "Dassault Aviation",
+      "zone": "Val-d'Oise (95) / IDF",
+      "urls": [
+        "https://dassault-aviation-cand.talent-soft.com/offre-de-emploi/liste-offres.aspx?LCID=1036"
+      ],
+      "request_delay_s": 1.0
+    },
+    {
+      "name": "groupe_adp",
+      "type": "web_generic",
+      "category": "company",
+      "enabled": true,
+      "company": "Groupe ADP (CDG)",
+      "zone": "Val-d'Oise (95) / IDF",
+      "urls": [
+        "https://groupeadp-recrute.talent-soft.com/offre-de-emploi/liste-offres.aspx?LCID=1036"
+      ],
+      "request_delay_s": 1.0
+    },
+    {
+      "name": "sncf",
+      "type": "web_generic",
+      "category": "company",
+      "enabled": false,
+      "company": "SNCF / SNCF Réseau",
+      "zone": "Val-d'Oise (95) / IDF",
+      "urls": [
+        "https://emploi.sncf.com/nos-offres?q=DevOps",
+        "https://emploi.sncf.com/nos-offres?q=Linux"
+      ],
+      "request_delay_s": 1.0
+    },
+    {
+      "name": "ratp",
+      "type": "workday",
+      "category": "company",
+      "enabled": true,
+      "company": "RATP",
+      "zone": "IDF hors 95",
+      "endpoint": "https://ratp.wd3.myworkdayjobs.com/wday/cxs/ratp/ratp_externe/jobs",
+      "web_base_url": "https://ratp.wd3.myworkdayjobs.com/fr-fr/ratp_externe",
+      "keywords": [
+        "DevOps",
+        "Linux"
       ]
     },
     {
-      "name": "Groupe ADP (CDG)",
+      "name": "edf_enedis",
+      "type": "web_generic",
+      "category": "company",
       "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://groupeadp-recrute.talent-soft.com/"
-      ]
-    },
-    {
-      "name": "SNCF / SNCF Réseau",
-      "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://emploi.sncf.com/nos-offres"
-      ]
-    },
-    {
-      "name": "RATP",
-      "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://ratpgroup.com/fr/recrutement/offres-demploi-du-groupe-ratp/"
-      ]
-    },
-    {
-      "name": "EDF / Enedis",
-      "enabled": true,
-      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
-      "careers_urls": [
-        "https://www.edf.fr/edf-recrute/rejoignez-nous/voir-les-offres/nos-offres",
+      "company": "EDF / Enedis",
+      "zone": "Val-d'Oise (95) / IDF",
+      "urls": [
+        "https://www.edf.fr/edf-recrute/rejoignez-nous/voir-les-offres/nos-offres?jobname=DevOps",
+        "https://www.edf.fr/edf-recrute/rejoignez-nous/voir-les-offres/nos-offres?jobname=Linux",
         "https://www.enedis.fr/hub-carriere"
-      ]
+      ],
+      "request_delay_s": 1.0
     },
     {
-      "name": "Conseil départemental du Val-d'Oise",
+      "name": "cd_valdoise",
+      "type": "web_generic",
+      "category": "company",
       "enabled": true,
+      "company": "Conseil départemental du Val-d'Oise",
       "zone": "Val-d'Oise (95)",
-      "careers_urls": [
-        "https://recrutement.valdoise.fr/"
-      ]
+      "urls": [
+        "https://recrutement.valdoise.fr/search#results"
+      ],
+      "request_delay_s": 1.0
     }
   ]
 }

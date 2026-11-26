@@ -1,0 +1,9 @@
+google-genai>=1.0
+pydantic>=2.5
+jinja2>=3.1             # rendu du template prompt.txt.jinja
+playwright>=1.45        # puis : playwright install chromium
+httpx>=0.27             # requêtes HTTP / APIs / collecteurs
+beautifulsoup4>=4.12    # conversion du CV HTML (inutile si cv.md existe)
+markdownify>=0.12       # idem
+python-dotenv>=1.0
+pytest>=8.0             # tests uniquement

@@ -1,0 +1,51 @@
+{
+  "cv_summary_path": "/home/arnaud/Documents/chomdu/cv_light.txt",
+  "cv_path": "/home/arnaud/Documents/chomdu/cv_full.txt",
+  "prompt": {
+    "reference_location": "Taverny",
+    "min_salary_k": 65,
+    "report_min_score": 40
+  },
+  "runtime": {
+    "model_name": "gemini-3.5-flash-lite",
+    "fallback_model_name": "",
+    "http_timeout_ms": 45000,
+    "retry_max_attempts": 4,
+    "retry_backoff_base_s": 2.0,
+    "retry_backoff_cap_s": 40.0,
+    "retry_max_elapsed_s": 180.0,
+    "circuit_breaker_failures": 3,
+    "min_seconds_between_evaluations": 15.0,
+    "min_seconds_between_api_calls": 15.0,
+    "max_gemini_evaluations_per_run": 5,
+    "keep_recent_turns": 2,
+    "filtered_recheck_days": 14,
+    "header_chars": 800,
+    "max_description_chars": 3000,
+    "redact_cv_contact": true,
+    "expired_offer_phrases": [
+      "offre pourvue",
+      "poste pourvu",
+      "n'est plus disponible",
+      "offre expiree"
+    ],
+    "blocked_title_patterns": [
+      "\\bstage\\b",
+      "\\bstagiaire\\b",
+      "\\balternance\\b",
+      "\\balternant(?:e)?\\b",
+      "\\bapprenti(?:ssage)?\\b",
+      "\\binfirmier(?:e)?\\b",
+      "\\benseignant(?:e)?\\b",
+      "\\bprofesseur(?:e)?\\b",
+      "\\bcomptable\\b",
+      "\\bm[ée]canicien(?:ne)?\\b",
+      "\\bassistant(?:e)? administratif\\b",
+      "\\bintern\\b",
+      "\\bsous-directeur(?:trice)?\\b",
+      "\\brayonneur(?:se)?\\b",
+      "\\bapprovisionneur(?:se)?\\b",
+      "\\bcynophile\\b"
+    ]
+  }
+}

@@ -8,11 +8,13 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # 4. Installer les dépendances dans le venv (sans sudo)
-pip install google-genai pydantic httpx beautifulsoup4 markdownify python-dotenv playwright
+#pip install google-genai pydantic httpx beautifulsoup4 markdownify python-dotenv playwright
+.venv/bin/pip install -r requirements.txt
+.venv/bin/pytest -q
 
 # 5. Installer Chromium pour Playwright
 playwright install chromium
 
 # 6. Lancer le script
 #python job_agent.py
-.venv/bin/python job_agent.py
+#.venv/bin/python job_agent.py
