@@ -1,0 +1,112 @@
+{
+  "jobboards": [
+    {
+      "name": "apec",
+      "enabled": false,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
+      "search_urls": [
+        "https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Linux%20DevOps"
+      ]
+    },
+    {
+      "name": "freework",
+      "enabled": true,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
+      "search_urls": [
+        "https://www.free-work.com/fr/tech-it/jobs?query=Linux%20Ansible%20Terraform"
+      ]
+    },
+    {
+      "name": "wttj",
+      "enabled": true,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
+      "search_urls": [
+        "https://www.welcometothejungle.com/fr/jobs?query=Infrastructure%20Linux"
+      ]
+    },
+    {
+      "name": "indeed",
+      "enabled": true,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
+      "search_urls": [
+        "https://fr.indeed.com/jobs?q=DevOps+Linux+Kubernetes&l=Val-d%27Oise+%2895%29",
+        "https://fr.indeed.com/jobs?q=Platform+Engineer+Terraform+Linux&l=%C3%8Ele-de-France&remotejob=032b3046-0674-476c-a8f7-71eb9e8b7437"
+      ]
+    },
+    {
+      "name": "glassdoor",
+      "enabled": false,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote)",
+      "search_urls": [
+        "https://www.glassdoor.fr/Emploi/ingenieur-systeme-linux-emplois-SRCH_IL.0,7_IC2896597_KO8,27.htm"
+      ]
+    }
+  ],
+  "companies": [
+    {
+      "name": "Thales",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://careers.thalesgroup.com/fr/fr/home"
+      ]
+    },
+    {
+      "name": "Safran",
+      "enabled": true,
+      "zone": "Val-d'Oise (95) / IDF (télétravail partiel ou full remote si hors 95)",
+      "careers_urls": [
+        "https://www.safran-group.com/fr/offres"
+      ]
+    },
+    {
+      "name": "Dassault Aviation",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://dassault-aviation-cand.talent-soft.com/"
+      ]
+    },
+    {
+      "name": "Groupe ADP (CDG)",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://groupeadp-recrute.talent-soft.com/"
+      ]
+    },
+    {
+      "name": "SNCF / SNCF Réseau",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://emploi.sncf.com/nos-offres"
+      ]
+    },
+    {
+      "name": "RATP",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://ratpgroup.com/fr/recrutement/offres-demploi-du-groupe-ratp/"
+      ]
+    },
+    {
+      "name": "EDF / Enedis",
+      "enabled": true,
+      "zone": "IDF hors 95 (télétravail partiel ou full remote requis)",
+      "careers_urls": [
+        "https://www.edf.fr/edf-recrute/rejoignez-nous/voir-les-offres/nos-offres",
+        "https://www.enedis.fr/hub-carriere"
+      ]
+    },
+    {
+      "name": "Conseil départemental du Val-d'Oise",
+      "enabled": true,
+      "zone": "Val-d'Oise (95)",
+      "careers_urls": [
+        "https://recrutement.valdoise.fr/"
+      ]
+    }
+  ]
+}
